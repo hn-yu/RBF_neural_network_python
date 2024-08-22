@@ -8,7 +8,7 @@ Feel free to use or modify the code.
 ## Requirements:
 + [Keras](https://keras.io)
 + [Tensorflow](https://www.tensorflow.org)
-+ [Tensorflow](https://scikit-learn.org/stable/index.html)
++ [scikit-learn](https://scikit-learn.org/stable/index.html)
 + optionally Matplotlib
 ## Usage
 After processing data you can build the model by adding the RBF hidden layer using RBF class in your network.
