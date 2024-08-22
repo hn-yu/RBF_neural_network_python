@@ -72,10 +72,11 @@ class RBFLayer(Layer):
         super(RBFLayer, self).build(input_shape)
 
     def call(self, x):
-
-        C = K.expand_dims(self.centers)
-        H = K.transpose(C-K.transpose(x))
-        return K.exp(-self.betas * K.sum(H**2, axis=1))
+        import tensorflow as tf
+        
+        C = tf.expand_dims(self.centers, axis=-1)
+        H = tf.transpose(C - tf.transpose(x))
+        return tf.exp(-self.betas * tf.reduce_sum(H**2, axis=1))
 
         # C = self.centers[np.newaxis, :, :]
         # X = x[:, np.newaxis, :]
