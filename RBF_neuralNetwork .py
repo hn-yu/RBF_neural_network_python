@@ -6,7 +6,6 @@ Zoghbi Abderraouf
 Change data to your location 
 """
 
-from keras import backend as K
 from keras.engine.topology import Layer
 from keras.initializers import RandomUniform, Initializer, Constant
 import numpy as np
